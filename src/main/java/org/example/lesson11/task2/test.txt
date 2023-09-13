@@ -1,0 +1,12 @@
+-- iterator equals
+Result: 541401
+Result: 14800
+-- iterator contains
+Result: 686600
+Result: 41200
+-- n^2
+Result: 546000
+Result: 15900
+-- stream
+Result: 3203700
+Result: 94299
