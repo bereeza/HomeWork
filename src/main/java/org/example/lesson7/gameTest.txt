@@ -1,0 +1,15 @@
+Let's start the game!
+apple
+
+Try again:
+***************
+orange
+
+Try again:
+***************
+lemon
+
+Try again:
+*e*on**********
+melon
+Win!
