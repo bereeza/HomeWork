@@ -9,7 +9,7 @@ public class Main {
         List<String> words1 = Arrays.asList("wolf", "fox", "lion", "bird", "tiger", "wolf", "fox", "turtle", "turtle", "bird", "fox");
         ObjectOccurrence occurrence = new ObjectOccurrence();
         System.out.println(occurrence.findOccurrence(words1));
-        occurrence.calcOccurrence(words);
+        occurrence.calcOccurrence(words1);
 
 //        [Words(name=wolf, count=2), Words(name=fox, count=3), Words(name=lion, count=1), Words(name=bird, count=2), Words(name=tiger, count=1), Words(name=turtle, count=2)]
 //        bird: 4

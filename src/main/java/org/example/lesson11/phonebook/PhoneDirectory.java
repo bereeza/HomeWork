@@ -13,9 +13,8 @@ public class PhoneDirectory {
     private List<PhoneRecord> recordList = new ArrayList<>();
 
     public void add(PhoneRecord phoneRecord) {
-        String name = phoneRecord.getName();
         for (PhoneRecord record : recordList) {
-            if (record.getName().equals(name)) {
+            if (record.getName().equals(phoneRecord.getName())) {
                 record.getPhones().addAll(phoneRecord.getPhones());
                 return;
             }
