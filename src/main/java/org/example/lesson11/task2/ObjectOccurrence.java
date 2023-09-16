@@ -28,6 +28,7 @@ public class ObjectOccurrence {
 
     private void occurrenceWorker(List<String> list, List<Words> wordOccurrences) {
         long start = System.nanoTime();
+
         // 1 test
         Iterator<String> iterator = list.listIterator();
         while (iterator.hasNext()) {
