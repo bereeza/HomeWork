@@ -35,7 +35,7 @@ public class ObjectOccurrence {
             String word = iterator.next();
             boolean found = false;
             for (Words w : wordOccurrences) {
-                if (w.getName().equals(word)) {
+                if (w.getName().contains(word)) {
                     w.setCount(w.getCount() + 1);
                     found = true;
                     break;
@@ -47,28 +47,28 @@ public class ObjectOccurrence {
         }
 
         // 2 test
-        for (String word : list) {
-            boolean found = false;
-            for (Words w : wordOccurrences) {
-                if (w.getName().equals(word)) {
-                    w.setCount(w.getCount() + 1);
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                wordOccurrences.add(new Words(word, 1));
-            }
-        }
-
-        // 3 test
-        for (String word : list) {
-            wordOccurrences.stream()
-                    .filter(w -> w.getName().contains(word))
-                    .findFirst()
-                    .ifPresentOrElse(x -> x.setCount(x.getCount() + 1),
-                            () -> wordOccurrences.add(new Words(word, 1)));
-        }
+//        for (String word : list) {
+//            boolean found = false;
+//            for (Words w : wordOccurrences) {
+//                if (w.getName().equals(word)) {
+//                    w.setCount(w.getCount() + 1);
+//                    found = true;
+//                    break;
+//                }
+//            }
+//            if (!found) {
+//                wordOccurrences.add(new Words(word, 1));
+//            }
+//        }
+//
+//        // 3 test
+//        for (String word : list) {
+//            wordOccurrences.stream()
+//                    .filter(w -> w.getName().contains(word))
+//                    .findFirst()
+//                    .ifPresentOrElse(x -> x.setCount(x.getCount() + 1),
+//                            () -> wordOccurrences.add(new Words(word, 1)));
+//        }
         long result = System.nanoTime() - start;
         System.out.println("Result: " +result);
     }
