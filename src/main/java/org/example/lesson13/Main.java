@@ -58,5 +58,7 @@ public class Main {
 //        num: 5| name: Carl,
 //                num: 6| name: Luke,
 //                num: 7| name: Captain Rex]
+
+        coffeeOrderBoard.deliver();
     }
 }

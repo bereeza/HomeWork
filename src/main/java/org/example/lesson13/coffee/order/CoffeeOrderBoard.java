@@ -41,7 +41,7 @@ public class CoffeeOrderBoard {
 
     @Override
     public String toString() {
-        return "Num | Name:\n" +
+        return "Num | Name: \n" +
                 clientsList;
     }
 }

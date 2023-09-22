@@ -1,6 +1,6 @@
 package org.example.lesson13.exception;
 
-public class IncorrectArgumentException extends RuntimeException{
+public class IncorrectArgumentException extends RuntimeException {
     public IncorrectArgumentException() {
     }
 

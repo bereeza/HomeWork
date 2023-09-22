@@ -18,6 +18,6 @@ public class Order {
     @Override
     public String toString() {
         return "\nnum: " + number +
-                "| name: " + name;
+                " | name: " + name;
     }
 }
