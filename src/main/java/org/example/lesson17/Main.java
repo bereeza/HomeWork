@@ -16,7 +16,7 @@ public class Main {
         // create config and use INFO lvl
         // if I use config lvl info and use logger.debug --> throw exception IncorrectConfigException,
         // file didn't create
-        FileLoggerConfiguration configuration = new FileLoggerConfiguration(LoggingLevel.INFO, file);
+        FileLoggerConfiguration configuration = new FileLoggerConfiguration(LoggingLevel.DEBUG, file);
         FileLogger logger = new FileLogger(configuration);
 
         // I create 15 msg "TEST MSG"
@@ -24,7 +24,7 @@ public class Main {
         // if > fileConfig.size --> create new file and write information
         // or uncomment FileMaxSizeReachedException and get exception
         for (int i = 0; i < 15; i++) {
-            logger.info("TEST MSG");
+            logger.debug("TEST MSG");
         }
 
 //        LVL: INFO

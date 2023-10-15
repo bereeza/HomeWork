@@ -2,9 +2,7 @@ package org.example.lesson17.fileLog;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.example.lesson17.Log.LogConfiguration;
 import org.example.lesson17.Log.Logger;
-import org.example.lesson17.Log.LoggingLevel;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -39,24 +37,21 @@ public class FileLogger extends Logger {
             loggingWithNewFile(s);
         }
 
-        try (PrintWriter writer = new PrintWriter(new FileWriter(config.getFile().getName(), true))) {
-            writer.println(s);
-            currentSize += s.length();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        writeToFile(s, config.getFile());
     }
 
     private void loggingWithNewFile(String s) {
-        try {
-            String logFileName = generateFileName();
-            File newLogFile = new File(logFileName);
-            config.setFile(newLogFile);
-            currentSize = 0;
-            try (PrintWriter writer = new PrintWriter(new FileWriter(newLogFile, true))) {
-                writer.println(s);
-                currentSize += s.length();
-            }
+        String logFileName = generateFileName();
+        File newLogFile = new File(logFileName);
+        config.setFile(newLogFile);
+        currentSize = 0;
+        writeToFile(s, newLogFile);
+    }
+
+    private void writeToFile(String s, File newLogFile) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(newLogFile, true))) {
+            writer.println(s);
+            currentSize += s.length();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
