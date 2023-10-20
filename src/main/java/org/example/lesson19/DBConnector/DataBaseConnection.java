@@ -11,7 +11,7 @@ import java.sql.SQLException;
 @Getter
 @Setter
 @NoArgsConstructor
-public class DataBaseConnection {
+public class DataBaseConnection implements AutoCloseable {
 
     private Connection connection;
 
@@ -19,7 +19,8 @@ public class DataBaseConnection {
         connection = DriverManager.getConnection(url, user, password);
     }
 
-    public void close() throws SQLException {
+    @Override
+    public void close() throws Exception {
         connection.close();
     }
 }
