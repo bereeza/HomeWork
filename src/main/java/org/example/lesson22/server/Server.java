@@ -9,6 +9,7 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,8 +17,8 @@ import java.util.Scanner;
 @Setter
 @NoArgsConstructor
 public class Server {
-    private static List<User> usersList = new ArrayList<>();
-    private static List<PrintWriter> clientWriters = new ArrayList<>();
+    private static List<User> usersList = Collections.synchronizedList(new ArrayList<>());
+    private static List<PrintWriter> clientWriters = Collections.synchronizedList(new ArrayList<>());
     private static final String STORAGE_PATH = "C:\\Users\\User\\IdeaProjects\\";
 
     public void start(int port) {
