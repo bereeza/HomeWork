@@ -1,0 +1,2 @@
+User(id=1, name=client_1, time=2023-11-05T11:12:34.809375900, userSocket=Socket[addr=/127.0.0.1,port=55401,localport=1234])
+User(id=2, name=client_2, time=2023-11-05T11:13:03.826189, userSocket=Socket[addr=/0:0:0:0:0:0:0:1,port=55411,localport=1234])
