@@ -7,7 +7,7 @@ import com.example.tomcatpractice.exception.ProductNotFoundException;
 
 import java.util.Map;
 
-public class ProductRepository implements Repository<Product> {
+public class ProductService implements Repository<Product> {
 
     @Override
     public Product getById(int id) {
