@@ -1,4 +1,4 @@
-package com.example.tomcatpractice.servlet;
+package org.example.lesson23.TomCatPractice.src.main.java.com.example.tomcatpractice.servlet;
 
 import com.example.tomcatpractice.entity.Order;
 import com.example.tomcatpractice.service.OrderRepository;
@@ -15,8 +15,8 @@ import java.io.PrintWriter;
 import java.util.Map;
 
 @WebServlet("/orders")
-public class Orders extends HttpServlet {
-    private OrderRepository repo = new OrderRepository();
+public class OrderServlet extends HttpServlet {
+    private OrderService repo = new OrderService();
     private Gson gson = new Gson();
 
     @Override

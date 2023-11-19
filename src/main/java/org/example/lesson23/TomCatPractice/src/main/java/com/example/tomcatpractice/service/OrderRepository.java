@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class OrderRepository implements Repository<Order> {
+public class OrderService implements Repository<Order> {
     @Override
     public Order getById(int id) {
         Order order = OrderDao.ORDER.get(id);

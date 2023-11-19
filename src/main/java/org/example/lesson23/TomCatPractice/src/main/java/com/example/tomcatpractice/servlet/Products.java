@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/product")
-public class Products extends HttpServlet {
-    private ProductRepository productRepo = new ProductRepository();
+public class ProductServlet extends HttpServlet {
+    private ProductService productRepo = new ProductService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
