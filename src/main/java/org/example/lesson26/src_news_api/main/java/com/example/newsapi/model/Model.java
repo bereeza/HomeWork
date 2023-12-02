@@ -1,9 +1,8 @@
-package com.example.tomcatpractice.service;
+package com.example.newsapi.model;
 
 import java.util.Map;
 
-public interface Repository<T> {
+public interface Model<T> {
     T getById(int id);
-
     Map<Integer, T> getAll();
 }
