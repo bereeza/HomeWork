@@ -1,0 +1,15 @@
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:28 - Add new client.
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:30 - Order(number=1, name=Petr) has been added.
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:61 - Current deque: [Order(number=1, name=Petr)]
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:21 - Add new clients.
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:23 - Result: [Order(number=1, name=Petr), Order(number=2, name=Artem), Order(number=3, name=Carl)]
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:61 - Current deque: [Order(number=1, name=Petr), Order(number=2, name=Artem), Order(number=3, name=Carl)]
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:37 - Ready order for Order(number=1, name=Petr)
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:61 - Current deque: [Order(number=2, name=Artem), Order(number=3, name=Carl)]
+2023-12-05 13:06:56 ERROR CoffeeOrderBoard:55 - Error delivering order
+java.util.NoSuchElementException: Order 22 not found
+	at org.example.lesson27.coffe.order.CoffeeOrderBoard.lambda$deliver$1(CoffeeOrderBoard.java:50)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.example.lesson27.coffe.order.CoffeeOrderBoard.deliver(CoffeeOrderBoard.java:50)
+	at org.example.lesson27.Main.main(Main.java:28)
+2023-12-05 13:06:56 INFO  CoffeeOrderBoard:61 - Current deque: [Order(number=2, name=Artem), Order(number=3, name=Carl)]
