@@ -1,0 +1,12 @@
+2023-12-21 10:39:51 INFO  ProductService:25 - All products:
+[Product(id=1, name=potato, cost=43.21), Product(id=2, name=tomato, cost=12.34)]
+2023-12-21 10:40:08 INFO  ProductService:35 - Product:
+Optional[Product(id=2, name=tomato, cost=12.34)]
+2023-12-21 10:43:28 INFO  ProductService:41 - Delete product:
+Optional[Product(id=2, name=tomato, cost=12.34)]
+2023-12-21 10:43:49 INFO  ProductService:35 - Product:
+Optional[Product(id=1, name=potato, cost=43.21)]
+2023-12-21 10:44:17 INFO  ProductService:47 - Add new product:
+tooth paste
+2023-12-21 10:44:33 INFO  ProductService:25 - All products:
+[Product(id=1, name=potato, cost=43.21), Product(id=5, name=tooth paste, cost=25.25)]
